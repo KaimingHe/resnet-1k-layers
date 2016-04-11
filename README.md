@@ -1,6 +1,6 @@
 # Deep Residual Networks with 1K Layers
 
-By [Kaiming He](http://research.microsoft.com/en-us/um/people/kahe/), [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en), [Shaoqing Ren](http://home.ustc.edu.cn/~sqren/), [Jian Sun](http://research.microsoft.com/en-us/people/jiansun/).
+By [Kaiming He](http://kaiminghe.com), [Xiangyu Zhang](https://scholar.google.com/citations?user=yuB-cfoAAAAJ&hl=en), [Shaoqing Ren](http://home.ustc.edu.cn/~sqren/), [Jian Sun](http://research.microsoft.com/en-us/people/jiansun/).
 
 Microsoft Research Asia (MSRA).
 
@@ -47,13 +47,16 @@ Related papers:
 	:---------:|:------------------:
 	128 (as in [a]) | 4.92
 	64 (as in this code)| **4.62**
-	
+
+0. Curves obtained by running this code with a mini-batch size of 64 (training loss: y-axis on the left; test error: y-axis on the right):	
+![resnet1k](https://cloud.githubusercontent.com/assets/11435359/14414142/68714c82-ffc0-11e5-8b1b-657fdb3d96a6.png)
 	
 ## Usage
 
 0. Install Torch ResNets (https://github.com/facebook/fb.resnet.torch) following instructions therein.
-0. Add the file resnet-pre-act.lua from this repository.
+0. Add the file resnet-pre-act.lua from this repository to ./models.
 0. To train ResNet-1001 as of the form in [a]:
 ```
 th main.lua -netType resnet-pre-act -depth 1001 -batchSize 64 -nGPU 2 -nThreads 4 -dataset cifar10 -nEpochs 200 -shareGradInput false
 ```
+**Note**: ``shareGradInput=true'' is not valid for this model yet.
