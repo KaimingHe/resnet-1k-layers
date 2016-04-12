@@ -43,10 +43,10 @@ Related papers:
 
 0. To fit the 1k-layer models into memory without modifying much code, we simply reduced the mini-batch size to 64, noting that results in the paper were obtained with a mini-batch size of 128. Less expectedly, the results with the mini-batch size of 64 are slightly better:
 
-	mini-batch |CIFAR-10 test error (%)
+	mini-batch |CIFAR-10 test error (%): (median (mean+/-std))
 	:---------:|:------------------:
-	128 (as in [a]) | 4.92
-	64 (as in this code)| **4.62**
+	128 (as in [a]) | 4.92 (4.89+/-0.14)
+	64 (as in this code)| **4.62** (4.69+/-0.20)
 
 0. Curves obtained by running this code with a mini-batch size of 64 (training loss: y-axis on the left; test error: y-axis on the right):	
 ![resnet1k](https://cloud.githubusercontent.com/assets/11435359/14414142/68714c82-ffc0-11e5-8b1b-657fdb3d96a6.png)
