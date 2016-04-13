@@ -15,7 +15,9 @@ Microsoft Research Asia (MSRA).
 
 This repository contains re-implemented code for the paper "Identity Mappings in Deep Residual Networks" (http://arxiv.org/abs/1603.05027). This work enables training quality **1k-layer** neural networks in a super simple way.
 
-**Acknowledgement**: This code is re-implemented by Xiang Ming from Xi'an Jiaotong Univeristy for the ease of release.
+*Acknowledgement*: This code is re-implemented by Xiang Ming from Xi'an Jiaotong Univeristy for the ease of release.
+
+**Seel Also:** Re-implementations of **ResNet-200 [a] on ImageNet** from Facebook AI Research (FAIR): https://github.com/facebook/fb.resnet.torch/tree/master/pretrained
 
 Related papers:
 
